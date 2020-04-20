@@ -27,7 +27,7 @@ int main()
 		string path = "Program Files (x86)", Cdrive = "C:";
 		char GachCheoNguoc(92);
 		narrow_string = Cdrive + GachCheoNguoc + path + GachCheoNguoc + "Steam" + GachCheoNguoc + "steamapps" + GachCheoNguoc + "common" + GachCheoNguoc + "Counter-Strike Global Offensive" + GachCheoNguoc + "csgo" + GachCheoNguoc + "cfg";
-		cout << "The path is: " << narrow_string << endl << endl;
+		cout << "Default path: " << narrow_string << endl << endl;
 	}
 
 	else if (choose)
