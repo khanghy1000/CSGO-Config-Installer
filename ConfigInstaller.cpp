@@ -93,12 +93,12 @@ int main()
 
 		cout << endl;
 
-		cout << "Do you want to close this program?" << endl;
+		cout << "Do you want to continue?" << endl;
 		cout << "[0]: No" << endl;
 		cout << "[1]: Yes" << endl;
 		cout << "Choose: "; cin >> loop;
 
-	} while (!loop);
+	} while (loop);
 
 	return 0;
 }
