@@ -10,37 +10,19 @@ using namespace std;
 
 int main()
 {
-	bool loop;
+	bool loop(1);
 	do
 	{
 		system("cls");
 		string narrow_string, narrow_string1;
-		bool choose;
 
 		cout << "***CSGO Config Installer by Nguyen Khang Hy***" << endl << endl;
-
-		cout << "Choose CSGO CFG output path: " << endl;
-		cout << "[0]: Default" << endl;
-		cout << "[1]: Other path" << endl;
-		cout << "Choose: "; cin >> choose;
+		cout << "Enter CSGO folder path: ";
+		getline(cin, narrow_string);
 		cout << endl;
-		cin.ignore(INT64_MAX, '\n');
 
-		if (!choose)
-		{
-			string path = "Program Files (x86)", Cdrive = "C:";
-			char GachCheoNguoc(92);
-			narrow_string = Cdrive + GachCheoNguoc + path + GachCheoNguoc + "Steam" + GachCheoNguoc + "steamapps" + GachCheoNguoc + "common" + GachCheoNguoc + "Counter-Strike Global Offensive" + GachCheoNguoc + "csgo" + GachCheoNguoc + "cfg";
-			cout << "Default path: " << narrow_string << endl << endl;
-		}
-
-		else if (choose)
-		{
-			cout << "Enter the path: "; getline(cin, narrow_string);
-			cout << endl;
-		}
-
-		narrow_string1 = narrow_string + "\\hy.cfg";
+		char GachCheoNguoc(92);
+		narrow_string1 = narrow_string + GachCheoNguoc + "csgo" + GachCheoNguoc + "cfg" + "\\hy.cfg";
 		wstring wide_string1 = wstring(narrow_string1.begin(), narrow_string1.end());
 		const wchar_t* result1 = wide_string1.c_str();
 
@@ -68,7 +50,7 @@ int main()
 		cout << "Downloading training.cfg....\t\t";
 
 		string narrow_string2;
-		narrow_string2 = narrow_string + "\\training.cfg";
+		narrow_string2 = narrow_string + GachCheoNguoc + "csgo" + GachCheoNguoc + "cfg" + "\\training.cfg";
 		wstring wide_string2 = wstring(narrow_string2.begin(), narrow_string2.end());
 		const wchar_t* result2 = wide_string2.c_str();
 
@@ -93,12 +75,7 @@ int main()
 
 		cout << endl;
 
-		cout << "Do you want to continue?" << endl;
-		cout << "[0]: No" << endl;
-		cout << "[1]: Yes" << endl;
-		cout << "Choose: "; cin >> loop;
-
+		cout << "DONE!" << endl;
+		system("pause>nul");
 	} while (loop);
-
-	return 0;
 }
